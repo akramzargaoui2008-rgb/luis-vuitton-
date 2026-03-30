@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <title>Louis Vuitton</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <h1>Louis Vuitton</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="active" onclick="showPage('home', this); return false;">Home</a></li>
+            <li><a href="#" onclick="showPage('products', this); return false;">Products</a></li>
+            <li><a href="#" onclick="showPage('contact', this); return false;">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <div id="home" class="page active">
+        <main>
+            <section>
+                <h2>Louis Vuitton</h2>
+                <div class="hero-img">
+                    <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=1400&q=80" alt="Louis Vuitton luxury bags collection on display">
+                </div>
+                <article>
+                    <h3>About Us</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis labore atque iure perferendis, ut quidem distinctio suscipit, voluptatibus aperiam repudiandae aspernatur, nostrum debitis. Ad molestiae earum voluptatum deserunt doloribus obcaecati?</p>
+                </article>
+            </section>
+        </main>
+    </div>
+
+
+    <div id="products" class="page">
+        <div class="page-content">
+            <section>
+                <div class="page-banner">
+                    <img src="https://images.unsplash.com/photo-1547949003-9792a18a2601?w=1400&q=80" alt="Louis Vuitton collection banner">
+                </div>
+
+                <h2>Our Products</h2>
+
+                <p class="intro-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates error ipsum autem officia eveniet nostrum. Praesentium deleniti animi possimus porro, voluptatibus quos ipsam id voluptatem distinctio rem voluptatum autem enim?</p>
+
+                <div class="products-row">
+                    <div class="product-card">
+                        <h3>Neverfull MM</h3>
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&q=80" alt="Louis Vuitton Neverfull MM handbag in brown monogram canvas">
+                            <figcaption>Neverfull MM</figcaption>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque officia aperiam ratione consectetur pariatur quasi quis et animi esse laborum consequatur hic, officiis libero accusantium quaerat asperiores non doloribus numquam.</p>
+                    </div>
+                    <div class="product-card">
+                        <h3>Speedy 30</h3>
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&q=80" alt="Louis Vuitton Speedy 30 bag in brown leather">
+                            <figcaption>Speedy 30</figcaption>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque officia aperiam ratione consectetur pariatur quasi quis et animi esse laborum consequatur hic, officiis libero accusantium quaerat asperiores non doloribus numquam.</p>
+                    </div>
+                    <div class="product-card">
+                        <h3>Keepall 55</h3>
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&q=80" alt="Louis Vuitton Keepall 55 travel duffel bag in monogram canvas">
+                            <figcaption>Keepall 55</figcaption>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque officia aperiam ratione consectetur pariatur quasi quis et animi esse laborum consequatur hic, officiis libero accusantium quaerat asperiores non doloribus numquam.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <div id="contact" class="page">
+        <div class="page-content">
+            <section>
+                <h2>Contact us</h2>
+                <div class="contact-layout">
+                    <address class="contact-info">
+                        Visit us at:<br>
+                        Louis Vuitton<br>
+                        Avenue des Champs-Élysées 101<br>
+                        75008 Paris<br>
+                        France<br>
+                        Email: <strong>info@louisvuitton.com</strong><br>
+                        Phone: <strong>+358 (0)401231233</strong>
+                    </address>
+                    <div class="contact-map">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=900&q=80" alt="Paris Champs-Elysees location where Louis Vuitton boutique is situated">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function showPage(pageId, clickedLink) {
+        document.querySelectorAll('.page').forEach(function(page) {
+            page.classList.remove('active');
+        });
+        document.querySelectorAll('nav a').forEach(function(link) {
+            link.classList.remove('active');
+        });
+        document.getElementById(pageId).classList.add('active');
+        clickedLink.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
